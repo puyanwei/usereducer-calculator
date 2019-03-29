@@ -3,7 +3,7 @@ import './../App.css';
 
 const Button = ({ label, handleClick }) => {
     return (
-        <button value={label} onClick={e => handleClick(e)}>
+        <button value={label} onClick={handleClick}>
             {label}
         </button>
     );
