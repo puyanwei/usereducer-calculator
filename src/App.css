@@ -15,5 +15,6 @@ button {
 }
 
 .window {
-    height: 40px;
+    padding: 10px;
+    height: 30px;
 }
