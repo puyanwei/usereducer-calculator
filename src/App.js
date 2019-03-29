@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <div className="container">
-                    <div className="calculator">
-                        <input className="window" type="text" />
-                        <div className="row">
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                        </div>
-                        <div className="row">
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
-                        </div>
-                        <div className="row">
-                            <button>7</button>
-                            <button>8</button>
-                            <button>9</button>
-                        </div>
-                        <button>0</button>
+import Button from './components/Button';
+
+const App = () => {
+    const window = useRef(0);
+    return (
+        <div className="App">
+            <div className="container">
+                <div className="calculator">
+                    <input className="window" type="text" ref={window} />
+                    <div className="row">
+                        <Button label="1" />
+                        <Button label="2" />
+                        <Button label="3" />
                     </div>
+                    <div className="row">
+                        <Button label="4" />
+                        <Button label="5" />
+                        <Button label="6" />
+                    </div>
+                    <div className="row">
+                        <Button label="7" />
+                        <Button label="8" />
+                        <Button label="9" />
+                    </div>
+                    <Button label="0" />
                 </div>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default App;
